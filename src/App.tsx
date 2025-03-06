@@ -2,18 +2,20 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
 import Projects from './pages/Projects';
 import Navbar from './components/navbar';
+import Resume from './pages/Resume';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
