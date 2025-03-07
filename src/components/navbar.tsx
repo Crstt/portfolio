@@ -3,7 +3,7 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "../providers/ThemeProvider";
 
 export default function Navbar() {
-  const { darkMode, setDarkMode } = useTheme();
+  const { darkMode, setDarkMode } = useTheme(); // Now properly typed
 
   return (
     <nav className="fixed top-4 right-4 bg-gray-800 dark:bg-gray-900 text-white p-4 rounded-lg shadow-lg flex gap-4 items-center">

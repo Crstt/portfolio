@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTheme } from "../providers/ThemeProvider";
 
 const sections = [
   { id: "hero", title: "Matteo Catalano", subtitle: "Software Engineer", contact: "Fort Wayne, IN | matteo598.catalano@gmail.com" },
@@ -28,12 +29,14 @@ const sections = [
 ];
 
 const Portfolio = () => {
+  const { darkMode } = useTheme();
+
   useEffect(() => {
     document.title = "Matteo Catalano - Portfolio";
   }, []);
 
   return (
-    <div className="scroll-smooth font-sans">
+    <div className={`scroll-smooth font-sans ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       {sections.map((section) => (
         <section key={section.id} id={section.id} className="min-h-screen p-10 flex flex-col justify-center items-center text-center">
           <h2 className="text-4xl font-bold mb-4">{section.title}</h2>
