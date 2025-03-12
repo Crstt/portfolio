@@ -2,7 +2,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Portfolio from './pages/Portfolio';
+import Portfolio from './pages/portfolio/Portfolio';
 import Projects from './pages/Projects';
 import Navbar from './components/navbar';
 import Resume from './pages/Resume';
