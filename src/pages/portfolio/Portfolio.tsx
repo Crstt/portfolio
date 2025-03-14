@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection";
 import SummarySection from "./components/SummarySection";
 import SkillsSection from "./components/SkillsSection";
 import EducationSection from "./components/EducationSection";
-import ExperienceSection from "./components/ExperienceSection";
+import ExperienceSection from "./components/exprerience/ExperienceSection";
 import CertificationsSection from "./components/CertificationsSection";
 import { motion } from "framer-motion";
 
