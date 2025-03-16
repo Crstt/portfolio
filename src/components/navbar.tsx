@@ -3,10 +3,11 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "../providers/ThemeProvider";
 
 export default function Navbar() {
-  const { darkMode, setDarkMode } = useTheme(); // Now properly typed
+  const { darkMode, setDarkMode } = useTheme();
 
   return (
-    <nav className="z-10 fixed top-4 right-4 bg-gray-800 dark:bg-gray-900 text-white p-4 rounded-lg shadow-lg flex gap-4 items-center">
+    <nav className={`z-10 fixed top-4 right-4 p-4 rounded-lg shadow-lg flex gap-4 items-center
+      ${darkMode ? "bg-gray-800 text-white" : "bg-cyan-200"}`}>
       <Link to="/" className="hover:text-gray-400">Home</Link>
       <Link to="/about" className="hover:text-gray-400">About</Link>
       <Link to="/projects" className="hover:text-gray-400">Projects</Link>

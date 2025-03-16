@@ -10,7 +10,13 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(() => localStorage.getItem("theme") === "dark");
+  const getInitialTheme = () => {
+    if (localStorage.theme === "dark") return true;
+    if (localStorage.theme === "light") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  };
+
+  const [darkMode, setDarkMode] = useState<boolean>(getInitialTheme);
 
   useEffect(() => {
     if (darkMode) {
