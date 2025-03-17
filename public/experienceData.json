@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Steel Dynamics",
+    "date": "June 2024 - Present",
+    "description": "Developed full-stack applications in C# and TypeScript using .NET and Angular frameworks for the sales division.",
+    "achivementsResponsibilities": [
+      "Developed and reviewed software applications including coding, testing, debugging, and documenting",
+      "Proponent and lead implementer of Test-Driven Development (TDD) practices for new projects, significantly reducing QA time and user-reported bugs by ensuring high code quality from the outset",
+      "Provided user support for software applications, including bug fixes and training"
+    ]
+  },
+  {
+    "title": "Computer Lab Assistant",
+    "company": "Ivy Tech Community College",
+    "date": "January 2023 - January 2024",
+    "description": "Tutored students daily in software development or STEM fields.",
+    "achivementsResponsibilities": [
+      "Led a initiative to redesign the website for the department",
+      "Developed iOS application for assignment tracking and motivation for students",
+      "Developed a writing planner that calculates the best schedule for a student to complete a writing project on time"
+    ]
+  },
+  {
+    "title": "Software Developer and System Integrator",
+    "company": "Sirius",
+    "date": "March 2018 - May 2022",
+    "description": "Developed software for first and second level SCADA systems and deployed solutions.",
+    "achivementsResponsibilities": [
+      "Developed internal software used in SCADA systems using C#, SQL, Python, PHP, JavaScript, and Lua",
+      "Utilized Machine Learning products to predict the potential production of a wind turbine during downtime or curtailment",
+      "Managed project for a 400-wind turbine, 700 MW SCADA solution spanning two countries"
+    ]
+  },
+  {
+    "title": "Full Stack Web Developer",
+    "company": "Pony Zero",
+    "date": "October 2017 - March 2018",
+    "description": "Developed the business management web application for the company.",
+    "achivementsResponsibilities": [
+      "Developed web applications with PHP, Laravel, Eloquent, JavaScript, and MySQL",
+      "Implemented source control with SourceTree and GitLab",
+      "Applied Agile code development methodology with Trello and standup meetings"
+    ]
+  }
+]

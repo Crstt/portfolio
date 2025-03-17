@@ -12,8 +12,8 @@ const sections = [
   { Component: HeroSection, id: "hero" },
   { Component: SummarySection, id: "summary" },
   { Component: SkillsSection, id: "skills" },
-  { Component: EducationSection, id: "education" },
   { Component: ExperienceSection, id: "experience" },
+  { Component: EducationSection, id: "education" },
   { Component: CertificationsSection, id: "certifications" },
 ];
 
@@ -26,9 +26,8 @@ const Portfolio: React.FC = () => {
 
   return (
     <div
-      className={`scroll-smooth font-sans w-full h-screen overflow-y-scroll snap-y snap-mandatory ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
-      }`}
+      className={`scroll-smooth font-sans w-full h-screen overflow-y-scroll snap-y snap-mandatory ${darkMode ? "bg-gray-900 text-white" : "bg-cyan-50 text-black"
+        }`}
     >
       {sections.map(({ Component, id }) => (
         <motion.div

@@ -6,9 +6,10 @@ interface SectionProps {
   subtitle?: string;
   contact?: string;
   content?: string | string[];
+  children?: React.ReactNode; // Allow nested components inside <Section>
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, subtitle, contact, content }) => {
+const Section: React.FC<SectionProps> = ({ id, title, subtitle, contact, content, children }) => {
   return (
     <section id={id} className="min-h-screen p-10 flex flex-col justify-center items-center text-center">
       <h2 className="text-4xl font-bold mb-4">{title}</h2>
@@ -23,6 +24,7 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitle, contact, content
           <p className="text-lg max-w-2xl">{content}</p>
         )
       )}
+      {children}
     </section>
   );
 };

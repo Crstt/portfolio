@@ -1,49 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ExperienceModal from "./ExperienceModal";
 import { useTheme } from "../../../../providers/ThemeProvider";
 
-const experienceData = [
-  [
-    {
-      title: "Software Engineer",
-      company: "Steel Dynamics",
-      date: "June 10, 2024 - Present",
-      description:
-        "Developing scalable enterprise solutions using C#, .NET, and Angular. Focused on AI integration and automation.",
-    },
-    {
-      title: "Computer Lab Assistant",
-      company: "Ivy Tech Community College",
-      date: "2023 - 2024",
-      description:
-        "Assisted students with software development coursework, debugging, and troubleshooting technical issues.",
-    }
-  ],
-  [
-    {
-      title: "Software Developer",
-      company: "Sirius",
-      date: "2018 - 2022",
-      description:
-        "Worked on cloud-based applications, microservices, and database optimizations for enterprise clients.",
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Pony Zero",
-      date: "2017 - 2018",
-      description:
-        "Built and maintained web applications using JavaScript frameworks and RESTful APIs.",
-    },
-  ]
-];
-
 const ExperienceSection: React.FC = () => {
 
   const { darkMode } = useTheme();
+  const [experienceData, setExperienceData] = useState<any[]>([]);
   const [selectedJob, setSelectedJob] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    fetch('/experienceData.json')
+      .then((response) => response.json())
+      .then((data) => setExperienceData(data))
+      .catch((error) => console.error("Error loading experience data:", error));
+  }, []);
 
   const handleJobClick = (e: React.MouseEvent, job: any) => {
     // Get click position relative to center of screen
@@ -80,7 +53,8 @@ const ExperienceSection: React.FC = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         originPosition={clickPosition}
-        job={selectedJob}></ExperienceModal>
+        job={selectedJob}>
+      </ExperienceModal>
     </div>
   );
 };
