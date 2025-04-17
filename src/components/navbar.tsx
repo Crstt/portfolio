@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className={`hidden md:flex z-10 fixed top-4 right-4 p-4 rounded-lg shadow-lg gap-4 items-center
+      <nav className={`hidden md:flex z-10 fixed top-4 right-4 p-4 rounded-lg gap-4 items-center
         ${darkMode ? "bg-gray-800 text-white" : "bg-cyan-200"}`}>
         <Link to="/" className="hover:text-gray-400 transition-colors">Home</Link>
         <Link to="/about" className="hover:text-gray-400 transition-colors">About</Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className={`md:hidden z-10 fixed top-4 left-4 right-4 p-3 rounded-lg shadow-lg
+      <nav className={`md:hidden z-10 fixed top-4 left-4 right-4 p-3 rounded-lg
         ${darkMode ? "bg-gray-800 text-white" : "bg-cyan-200"}`}>
         <div className="flex justify-between items-center">
           <div className="text-lg font-semibold">

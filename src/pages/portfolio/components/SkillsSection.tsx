@@ -29,15 +29,30 @@ const skills: Skill[] = [
 ];
 
 const SkillsSection: React.FC = () => (
-  <section id="skills" className="min-h-screen p-10 flex flex-col justify-center items-center text-center">
-    <h2 className="text-4xl font-bold mb-4">Skills</h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {skills.map((skill) => (
-        <div key={skill.name} className="flex flex-col items-center">
-          <img src={skill.image} alt={skill.name} className="h-16 w-16 mb-2" />
-          <span className="text-lg font-medium">{skill.name}</span>
-        </div>
-      ))}
+  <section id="skills" className="py-16 px-4 sm:px-6 pt-20 pb-8 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">Skills</h2>
+      
+      {/* Mobile: 3 columns, Tablet: 4 columns, Desktop: 5-6 columns */}
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
+        {skills.map((skill) => (
+          <div 
+            key={skill.name} 
+            className="flex flex-col items-center group hover:transform hover:scale-105 transition-transform duration-200"
+          >
+            <div className="rounded-lg p-3 sm:p-4 hover: duration-200 mb-2 sm:mb-3">
+              <img 
+                src={skill.image} 
+                alt={skill.name} 
+                className="h-8 w-8 sm:h-12 sm:w-12 lg:h-14 lg:w-14 object-contain" 
+              />
+            </div>
+            <span className="text-xs sm:text-sm lg:text-base font-medium text-center leading-tight px-1">
+              {skill.name}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
